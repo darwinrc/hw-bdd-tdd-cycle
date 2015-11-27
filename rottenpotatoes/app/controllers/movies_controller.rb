@@ -61,4 +61,13 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def find_with_same_director
+      id = params[:id] # retrieve movie ID from URI route
+      @movie = Movie.find(id) # look up movie by unique ID
+      if !@movie.director || @movie.director == ''
+        flash[:notice] = "'#{@movie.title}' has no director info"
+        redirect_to movies_path 
+      end
+      @movies = @movie.find_with_same_director
+  end
 end
