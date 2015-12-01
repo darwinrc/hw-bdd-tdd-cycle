@@ -39,6 +39,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.2)
+    autotest-rails (4.2.1)
+      ZenTest (~> 4.5)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -181,6 +183,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest (= 4.11.0)
+  autotest-rails
   byebug
   capybara (= 2.4.4)
   coffee-rails (~> 4.1.0)

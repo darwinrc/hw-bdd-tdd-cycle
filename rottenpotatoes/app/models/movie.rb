@@ -3,7 +3,7 @@ class Movie < ActiveRecord::Base
     %w(G PG PG-13 NC-17 R)
   end
 
-  def find_with_same_director
+  def find_movies_with_same_director
     Movie.where('director = ?', self.director)   
   end
 end
